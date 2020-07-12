@@ -3,8 +3,6 @@ import time
 import requests
 app = Flask(__name__)
 
-t2 = time.time()
-t3 = time.time()
 headers = {
 	'Content-Type':'application/x-www-form-urlencoded',
 	'Content-Length':'123'
@@ -12,7 +10,6 @@ headers = {
 
 @app.route('/')
 def index():
-  global t1
   global headers
   result = request.args.get('result')
   c = request.args.get('c')
